@@ -1,9 +1,15 @@
-use chrono::{DateTime, Local};
+pub fn increasing_depth_count(depth_readings: Vec<i32>) -> i32 {
+    let mut s = 0;
+    let mut last: i32 = -1;
+    for current in depth_readings {
+        if last > 0 && current > last {
+            s += 1;
+        }
+        last = current;
+    }
+    s
+}
 
-pub fn time_until_start() -> String {
-    let start = DateTime::parse_from_str("2021-12-01 00:00:00 -04:00", "%Y-%m-%d %H:%M:%S %z")
-        .unwrap()
-        .with_timezone(&Local);
-    let now = Local::now();
-    format!("{}", start - now)
+pub fn sliding_window_depth_count(depth_readings: Vec<i32>) -> i32 {
+    0
 }
