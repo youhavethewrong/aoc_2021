@@ -1,6 +1,6 @@
 extern crate aoc_2021;
 
-use aoc_2021::increasing_depth_count;
+use aoc_2021::day1::{increasing_depth_count, sliding_window_depth_count};
 use std::fs::File;
 use std::io::prelude::*;
 use std::io::{BufReader, Error};
@@ -31,7 +31,7 @@ fn main() -> Result<(), Error> {
     println!("Hello, 2021!");
     let input = std::env::args().nth(1).expect("\nprovide a filename\n");
     let depth_readings = convert_file_contents_to_numbers(&input)?;
-    let result = increasing_depth_count(depth_readings);
+    let result = sliding_window_depth_count(depth_readings);
     println!("Increasing depths {}", result);
     Ok(())
 }
