@@ -1,6 +1,8 @@
 extern crate aoc_2021;
 
-use aoc_2021::day1::{increasing_depth_count, sliding_window_depth_count};
+use aoc_2021::day1::{
+    backwards_sliding_window_depth_count, increasing_depth_count, sliding_window_depth_count,
+};
 use std::fs::File;
 use std::io::prelude::*;
 use std::io::{BufReader, Error};
