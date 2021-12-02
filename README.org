@@ -1,0 +1,22 @@
+* Advent of Code, 2021
+This is my set of solutions to the challenges posed by [[https://adventofcode.com][Advent of Code]].
+
+#+begin_export ascii
+         v
+        >X<
+         A
+        d$b
+      .d\$$b.
+    .d$i$$\$$b.
+       d$$@b
+      d\$$$ib
+    .d$$$\$$$b
+  .d$$@$$$$\$$ib.
+      d$$i$$b
+     d\$$$$@$b
+  .d$@$$\$$$$$@b.
+.d$$$$i$$$\$$$$$$b.
+        ###
+        ###
+        ### mh
+#+end_export
