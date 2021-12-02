@@ -1,8 +1,7 @@
 extern crate aoc_2021;
 
-use aoc_2021::day1::{
-    backwards_sliding_window_depth_count, increasing_depth_count, sliding_window_depth_count,
-};
+use aoc_2021::day1::*;
+use aoc_2021::day2::*;
 use std::fs::File;
 use std::io::prelude::*;
 use std::io::{BufReader, Error};
@@ -32,8 +31,8 @@ fn convert_file_contents_to_numbers(input: &str) -> Result<Vec<i32>, Error> {
 fn main() -> Result<(), Error> {
     println!("Hello, 2021!");
     let input = std::env::args().nth(1).expect("\nprovide a filename\n");
-    let depth_readings = convert_file_contents_to_numbers(&input)?;
-    let result = sliding_window_depth_count(depth_readings);
-    println!("Increasing depths {}", result);
+    let day2 = convert_file_to_string(&input)?;
+    let (hp, d, _) = navigate_with_aim(&day2);
+    println!("Navigate {}", hp * d);
     Ok(())
 }
