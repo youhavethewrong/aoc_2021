@@ -1,8 +1,6 @@
 (ns aoc-2021.day4
   (:require [clojure.string :as str]))
 
-(def input (str/split (slurp "resources/day4-0.txt") #"\n"))
-
 (defn parse-draws-and-boards
   [input]
   (loop [acc {:draws (str/split (first input) #",") :boards []}
