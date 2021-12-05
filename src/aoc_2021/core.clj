@@ -3,7 +3,8 @@
   (:require [clojure.string :as str]
             [aoc-2021.day1 :as d1]
             [aoc-2021.day2 :as d2]
-            [aoc-2021.day3 :as d3]))
+            [aoc-2021.day3 :as d3]
+            [aoc-2021.day4 :as d4]))
 
 (defn runner
   "Read input from file and run our function."
@@ -20,6 +21,7 @@
                     (* hp depth))
       (= m "d3a") (* (d3/gamma-rate lines) (d3/epsilon-rate lines))
       (= m "d3b") (* (d3/oxygen-generator-rating lines) (d3/co2-scrubber-rating lines))
+      :else (println "not implemented")
       )))
 
 (defn -main
