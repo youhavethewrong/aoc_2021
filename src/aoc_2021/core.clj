@@ -21,6 +21,11 @@
                     (* hp depth))
       (= m "d3a") (* (d3/gamma-rate lines) (d3/epsilon-rate lines))
       (= m "d3b") (* (d3/oxygen-generator-rating lines) (d3/co2-scrubber-rating lines))
+      (= m "d4a") (let [{boards :boards draws :draws} (d4/parse-draws-and-boards lines)
+                        [solution last-draw] (d4/play-game boards draws)]
+                    ;; need to sum the *unmarked* ones...
+                    ;; (apply + (map #(Integer/parseInt (:v %)) (first x)))
+                    )
       :else (println "not implemented")
       )))
 
